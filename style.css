@@ -1,0 +1,387 @@
+body {
+  position: relative;
+  background: #ffffff;
+}
+
+@font-face {
+  font-family: Gilroy;
+  src: url("Gilroy-FREE/Gilroy-ExtraBold.otf");
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url("Robot/Roboto-Regular.ttf");
+}
+
+/*Хеад*/
+header {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  height: 95px;
+  left: 0px;
+  top: 0px;
+  z-index: 2;
+  top: 20px;
+}
+
+.conteiner {
+  position: relative;
+  left: 25px;
+  width: calc(100% - 50px);
+}
+
+.logo {
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.logo__icon {
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  top: 6px;
+  background-color: black;
+}
+
+.logo__text {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 15px;
+  margin-top: 1px;
+
+  font: normal 800 17px/21px Gilroy;
+  text-decoration: none;
+  color: #262525;
+  border: 0;
+  letter-spacing: 0.290629px;
+  text-transform: uppercase;
+}
+
+.menu {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  left: calc(50% - 575px);
+}
+
+.menu__list {
+  display: inline-block;
+  list-style-type: none;
+  margin: 0;
+}
+
+.menu__element {
+  display: inline-block;
+  transition: color 0.2s linear;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.menu__link {
+  text-decoration: none;
+  color: #262525;
+  font: normal 800 12px/15px Gilroy;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.menu__line {
+  position: absolute;
+  display: block;
+  left: 60px;
+  width: 100px;
+  height: 4px;
+  background-color: #d88f5e;
+  z-index: 1;
+  transition-duration: 0.8s;
+
+  transform: translateX(0px) scaleX(1);
+}
+
+.callnumber {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  left: calc(50% + 129px / 2 - 300px);
+  color: #262525;
+  text-decoration: none;
+  font: normal 800 17px/21px Gilroy;
+  letter-spacing: 0.290629px;
+  text-transform: uppercase;
+}
+
+.butger {
+  position: relative;
+  display: inline-block;
+  left: calc(50% - 70px / 2 - 125px);
+  width: 70px;
+  height: 70px;
+  background-color: black;
+  border: 0;
+  outline: none;
+  padding: 0;
+  cursor: pointer;
+}
+/*
+
+
+Main main
+
+
+*/
+.divmain {
+  position: absolute;
+  left: 60px;
+  top: 55px;
+  width: calc(100% - 120px);
+  height: 840px;
+  opacity: 0;
+  z-index: 0;
+  background-color: #ffffff;
+}
+
+.divmain--active {
+  position: absolute;
+  left: 60px;
+  top: 55px;
+  width: calc(100% - 120px);
+  height: 840px;
+  opacity: 1;
+  z-index: 1;
+  background-color: #ffffff;
+}
+
+/*Асайд*/
+
+/*aside-menu*/
+
+aside {
+  position: relative;
+  top: 48px;
+  margin-right: 0px;
+}
+
+.aside-menu {
+  position: relative;
+  top: 250px;
+  height: 251px;
+  padding: 0;
+  margin: 0;
+}
+
+.aside-menu__item {
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+
+.aside-menu__link {
+  position: relative;
+  display: inline-block;
+
+  height: 25px;
+
+  font: normal 300 13px/15px Roboto;
+  letter-spacing: 0.567739px;
+  transition: color 0.2s linear;
+  text-decoration: none;
+
+  letter-spacing: 0.8px;
+  text-align: left;
+  color: #262525;
+}
+
+.aside-menu__link:after {
+  content: "";
+  position: relative;
+  display: block;
+  top: -7px;
+  height: 9px;
+  width: 0;
+  background-color: #ebd8cc;
+  opacity: 1;
+  z-index: -1;
+  transition-duration: 0.8s;
+}
+
+.aside-menu__link--hover {
+}
+
+.aside-menu__link--hover:after {
+  width: 100%;
+}
+
+.aside-menu__link--active {
+  height: 27px;
+
+  font: normal bold 14px/16px Roboto;
+  text-transform: uppercase;
+}
+
+.aside-menu__link--active:after {
+  width: 100%;
+}
+
+.list_content_main {
+  font: normal bold 14px/16px Roboto;
+
+  letter-spacing: 0.567739px;
+  text-transform: uppercase;
+}
+
+/*
+
+
+Маин
+
+
+
+*/
+main {
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+
+  width: calc(100% - 280px);
+  height: 840px;
+  left: 280px;
+  top: 0px;
+  z-index: 0;
+}
+
+.description {
+  left: 0;
+  background-color: #f0f0f0;
+  flex-grow: 5;
+  min-width: 558px;
+}
+
+.description__item {
+  position: relative;
+  top: 155px;
+  transition-duration: 0.8s;
+  height: 0px;
+  overflow: hidden;
+}
+
+.description__item--active {
+  height: 440px;
+}
+
+.description__main-text {
+  padding-top: 175px;
+  padding-left: 178px;
+  width: 435px;
+  font: normal 800 44px/54px Gilroy;
+
+  letter-spacing: -0.0255199px;
+  text-transform: uppercase;
+
+  color: #262525;
+}
+
+.description__semi-text {
+  position: relative;
+  top: 40px;
+  margin-left: 180px;
+  width: 435px;
+  overflow: hidden;
+  word-break: inherit;
+
+  font: normal normal 18px/30px Roboto;
+  letter-spacing: -0.0220791px;
+  text-transform: none;
+
+  color: #262525;
+}
+
+.blackbox {
+  content: "..."; /* Добавляемый текст */
+  width: 28px;
+  height: 28px;
+  color: white; /* Цвет текста */
+  background-color: #262525; /* Цвет фона */
+  font-size: 90%; /* Размер шрифта */
+  padding: 5px;
+  padding-left: 7.5px;
+  padding-right: 7.5px;
+}
+
+.description__navigacia {
+  position: absolute;
+  z-index: 1;
+  top: 665px;
+  left: 178px;
+  font: normal 300 17px/20px Gilroy;
+}
+
+.picture {
+  overflow: hidden;
+  height: 840px;
+  flex-grow: 5;
+  width: 758px;
+  max-width: 758px;
+}
+
+.picture__slaider {
+  height: 0px;
+  transition-duration: 0.8s;
+}
+
+.picture__slaider--active {
+  height: 840px;
+}
+
+.pic0 {
+  background-image: url(pic0.png);
+}
+.pic1 {
+  background-image: url(pic1.png);
+}
+.pic2 {
+  background-image: url(pic2.png);
+}
+.pic3 {
+  background-image: url(pic3.png);
+}
+.pic4 {
+  background-image: url(pic4.png);
+}
+.pic5 {
+  background-image: url(pic5.png);
+}
+
+/*Футер*/
+footer {
+  position: relative;
+  top: 800px;
+  margin: 0 auto;
+  height: 57px;
+  width: 100%;
+
+  bottom: 0;
+}
+
+.footer_content {
+  position: relative;
+  top: 22px;
+  left: calc(50% - 205px / 2 - 797.5px);
+  width: calc(100% - 50px);
+  /* Desctop/Footer */
+
+  font: normal 300 13px/15px Gilroy;
+  /* identical to box height */
+
+  letter-spacing: 0.175729px;
+  text-transform: uppercase;
+
+  /* TextDisable */
+
+  color: #505050;
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+}
